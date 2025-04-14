@@ -10,7 +10,7 @@ public class FutureValueCalculator {
         double deposit = scanner.nextDouble();
 
         System.out.println(" Enter annual interest rate ( as a percentage, e.g. 1.75 or 2.54: ");
-        double annualRate = scanner.nextDouble()/100; //decimall
+        double annualRate = scanner.nextDouble()/100; //decimal
 
         System.out.println(" ENter the number of years:  ");
         int years = scanner.nextInt();
