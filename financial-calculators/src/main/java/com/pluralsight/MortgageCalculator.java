@@ -27,10 +27,12 @@ public class MortgageCalculator {
 
         //total interest
         double totalInterest = (monthlyPayment* numPayments) - principal;
+        double totalLoanAmount = monthlyPayment * numPayments;
 
         // results yayyy!
         System.out.printf(" Your monthly payment is $%.2f%n",monthlyPayment );
         System.out.printf("Total interest paid over the loan term: $%.2f%n",totalInterest );
+        System.out.println("Total Loan equals to $" +totalLoanAmount);
         realtor.close();// realtor no longer needed ;))
 
 
