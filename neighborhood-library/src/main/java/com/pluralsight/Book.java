@@ -66,7 +66,7 @@ public class Book {
     public  void checkedIn (){
         this.isCheckedOut=false;
         this.checkedOutTo="";
-        System.out.println(" com.pluralsight.Book "+ title + " has been checked in");
+        System.out.println(" Title of the book:  "+ title + " has been checked in");
 
     }
 
