@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 public class Book {
 
     private int id;
@@ -38,7 +40,7 @@ public class Book {
         this.title = title;
     }
 
-    public boolean isCheckedOut() {
+    public boolean getIsCheckedOut() {
         return isCheckedOut;
     }
 
@@ -58,15 +60,18 @@ public class Book {
     public void checkOut(String name){
         this.isCheckedOut=true;
         this.checkedOutTo=name;
-        System.out.println("Book "+ "\" "+ title+ "\" "+ "has been checked out to" +name +". " );
+        System.out.println("com.pluralsight.Book "+ "\" "+ title+ "\" "+ "has been checked out to" +name +". " );
     }
     public  void checkedIn (){
         this.isCheckedOut=false;
         this.checkedOutTo="";
-        System.out.println(" Book "+ title + " has been checked in");
+        System.out.println(" com.pluralsight.Book "+ title + " has been checked in");
 
     }
 
 //done with methods getters and setter hopefully
     //maybe string create method last
+    //
+   // @Override
+   // public String toString
 }
