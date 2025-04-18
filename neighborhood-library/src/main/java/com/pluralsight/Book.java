@@ -60,7 +60,8 @@ public class Book {
     public void checkOut(String name){
         this.isCheckedOut=true;
         this.checkedOutTo=name;
-        System.out.println("com.pluralsight.Book "+ "\" "+ title+ "\" "+ "has been checked out to" +name +". " );
+        System.out.println("Id number  "+ id +"  ISBN number : " + isbn+"   \""+ title+ "\" "+ "has been checked out to" +name +". " );
+
     }
     public  void checkedIn (){
         this.isCheckedOut=false;
@@ -72,6 +73,9 @@ public class Book {
 //done with methods getters and setter hopefully
     //maybe string create method last
     //
-   // @Override
-   // public String toString
+    @Override
+    public String toString(){
+        return "ID "+ id+ "  , ISBN: "+ isbn + ", Title: \" " + "\", Checked Out To: \"" + checkedOutTo + "\"";
+
+    }
 }

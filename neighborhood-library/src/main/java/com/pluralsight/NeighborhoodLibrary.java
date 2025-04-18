@@ -66,8 +66,8 @@ public class NeighborhoodLibrary {
         System.out.println("\n Enter the ID of the book to check out: ");
         int id = libClerk.nextInt();
         libClerk.nextLine();
-        System.out.println(" Enter the name of the person checking out the book: ");
-
+        System.out.println(" Enter the name of the person checking out the book: ");// name string insert
+        String name = libClerk.nextLine();
 
         for (Book book : inventory){
             if(book != null && book.getId()==id){
