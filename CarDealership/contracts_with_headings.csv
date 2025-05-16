@@ -1,4 +1,6 @@
 Type|contract date|name|email|car id|year|make|model|vehicle type|color|odometer|price|sales tax|recording fee|processing fee|total cost|finance|monthly payment
+SALE|20251212|Berkcan Emre|Berk@email.com|95234|2018|BMW|X3|SUV|black|30000|37995.00|40489.75|YES|926.13
+SALE|20250515|Abishek Second|asecond@pitt.com|62456|26839.75|609.25|YES
 SALE|20210928|Kamron Guthiere|Kguthiere@pitt.com|10112|1993|Ford|Explorer|SUV|Red|525123|995.00|49.75|100.00|295.00|1439.75|NO|0.00
 SALE|20231201|Jacob Turner|jturner@dealer.net|10456|2015|BMW|X5|SUV|Silver|98000|19500.00|975.00|100.00|295.00|2370.00|YES|180.00
 SALE|20230919|Lucas Brown|lbrown@dealer.net|48732|2008|Honda|Civic|sedan|Gray|165000|2950.00|147.50|100.00|295.00|3492.50|NO|0.00
