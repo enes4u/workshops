@@ -66,7 +66,7 @@ public class UserInterface {
                     processSellOrLeaseRequest();
                     break;
                 case "99":
-                    for (int i  =0 ; i <3 ; i++ ){
+                    for (int i =0 ; i <3 ; i++ ){
                         System.out.println("...");
                     Thread.sleep(1500);}
                     System.out.println("Exiting application. GOODBYE!");
