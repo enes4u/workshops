@@ -56,7 +56,7 @@ triangle|-80|10|10|green|55|0
 
 ## 🖼️  Console RUN
 
-![Image] image should be here
+![Image](https://github.com/enes4u/workshops/blob/main/TurtlePaint/drawing.png?raw=true)
 
 ---
 
