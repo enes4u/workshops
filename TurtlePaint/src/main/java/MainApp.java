@@ -1,4 +1,7 @@
 import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,7 +9,7 @@ public class MainApp {
     private static Scanner scanner = new Scanner(System.in);
     private static ArrayList<Shape> shapes = new ArrayList<>();
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws InterruptedException {
         // This starter code to get you familiar with how
         // the TurtleLogo application works
 
@@ -45,11 +48,11 @@ public class MainApp {
 
         World world = new World(width, height);
         Turtle turtle = new Turtle(world, 0, 0);
-
-        while (true) {
+    boolean run = true;
+        while (run) {
             System.out.println("\nHome Screen");
             System.out.println("1) Add Shape");
-            System.out.println("2) Save Image (Not Implemented)");
+            System.out.println("2) Save Image (Implemented)");
             System.out.println("0) Exit");
             System.out.print("Choose an option: ");
 
@@ -61,11 +64,17 @@ public class MainApp {
                     addShape(turtle);
                     break;
                 case 2:
-                    System.out.println("Save Image - Feature not implemented yet.");
+                    savePainting();
+                    System.out.println("Save Image - Feature already implemented.");
                     break;
                 case 0:
+                    for (int i = 3; i > 0; i--) {
+                        Thread.sleep(1000); // Sleep for 1 second
+                        System.out.print(i + ".. ");}
+
                     System.out.println("Exiting...");
-                    return;
+                    run = false;
+                    System.exit(0);
                 default:
                     System.out.println("Invalid choice.");
             }
@@ -117,6 +126,48 @@ public class MainApp {
         shapes.add(shape);
         shape.paint();
     }
+
+    private static void savePainting() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("painting.csv"))) {
+            // First line: canvas info (default to 500x500 white background for now)
+            writer.println("500|500|white");
+
+            for (Shape shape : shapes) {
+                if (shape instanceof Square) {
+                    Square s = (Square) shape;
+                    writer.printf("square|%d|%d|%d|%s|%d|%d\n",
+                            s.location.x, s.location.y, s.border, colorToString(s.color), s.side, 0);
+                } else if (shape instanceof Circle) {
+                    Circle c = (Circle) shape;
+                    writer.printf("circle|%d|%d|%d|%s|%d|0\n",
+                            c.location.x, c.location.y, c.border, colorToString(c.color), c.radius);
+                } else if (shape instanceof Triangle) {
+                    Triangle t = (Triangle) shape;
+                    writer.printf("triangle|%d|%d|%d|%s|%d|0\n",
+                            t.location.x, t.location.y, t.border, colorToString(t.color), t.side);
+                } else if (shape instanceof Hexagon) {
+                    Hexagon h = (Hexagon) shape;
+                    writer.printf("triangle|%d|%d|%d|%s|%d|0\n",
+                            h.location.x, h.location.y, h.border, colorToString(h.color), h.side);
+                }
+            }
+
+            System.out.println("Painting saved to painting.csv.");
+        } catch (IOException e) {
+            System.out.println("Failed to save painting: " + e.getMessage());
+        }
+    }
+
+    private static String colorToString(Color color) {
+        if (color.equals(Color.RED)) return "red";
+        if (color.equals(Color.GREEN)) return "green";
+        if (color.equals(Color.BLUE)) return "blue";
+        if (color.equals(Color.BLACK)) return "black";
+        if (color.equals(Color.YELLOW)) return "yellow";
+        return "gray";
+    }
+
+
 
     private static Color getColorFromString(String colorStr) {
         switch (colorStr) {

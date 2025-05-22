@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Point;
 
 public class Triangle extends Shape {
-    private int side;
+    protected int side;
 
     public Triangle(Turtle turtle, Point location, Color color, int border, int side) {
         super(turtle, location, color, border);

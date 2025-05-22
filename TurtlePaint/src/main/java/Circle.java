@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Point;
 
 public class Circle extends Shape {
-    private int radius;
+    protected int radius;
 
     public Circle(Turtle turtle, Point location, Color color, int border, int radius) {
         super(turtle, location, color, border);

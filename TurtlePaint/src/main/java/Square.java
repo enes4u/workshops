@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Point;
 
 public class Square extends Shape {
-    private int side;
+    protected int side;
 
     public Square(Turtle turtle, Point location, Color color, int border, int side) {
         super(turtle, location, color, border);
