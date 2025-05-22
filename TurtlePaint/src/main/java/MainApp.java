@@ -1,9 +1,7 @@
 import java.awt.*;
 
-public class MainApp
-{
-    public static void main(String[] args)
-    {
+public class MainApp {
+    public static void main(String[] args)  {
         // This starter code to get you familiar with how
         // the TurtleLogo application works
 
@@ -21,8 +19,8 @@ public class MainApp
         double hypotenuse = Math.sqrt(widthSquared + heightSquared);
 
 
-        turtle.setPenWidth(3);
-        turtle.setColor(Color.GREEN);
+        turtle.setPenWidth(5);
+        turtle.setColor(Color.BLUE);
 
         turtle.turnRight(45);
         turtle.forward(hypotenuse);
@@ -33,5 +31,8 @@ public class MainApp
 
         turtle.penDown();
         turtle.forward(hypotenuse);
+
+
+
     }
 }
