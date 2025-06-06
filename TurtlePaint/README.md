@@ -45,7 +45,7 @@ Home Screen
 ## 💾 Saving Paintings
 
 When you choose `Save Image`, the app writes shape data to `painting.csv` like this:
-```
+``` 
 500|500|white
 square|65|65|15|blue|30|0
 circle|65|-65|5|red|35|0
@@ -78,7 +78,8 @@ triangle|-80|10|10|green|55|0
 ---
 
 ## 🛠️ Future Enhancements
-✅ Load shapes from `painting.csv`
+✅ Load shapes from `painting.csv` -- done 
+
 ✅Add more shape types (e.g., Hexagon, Pentagon) --Hexagon done
 - GUI version with shape preview
 
