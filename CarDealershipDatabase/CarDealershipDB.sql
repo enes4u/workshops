@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS CarDealershipDatabase;
+-- DROP DATABASE IF EXISTS CarDealershipDatabase;
 CREATE DATABASE CarDealershipDatabase;
 USE CarDealershipDatabase;
 CREATE TABLE dealerships (

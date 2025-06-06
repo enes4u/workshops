@@ -47,3 +47,16 @@ INSERT INTO sales_contracts (VIN, dealership_id, customer_name, sale_date, sale_
 ('JHMCF1F71CX000009', 1, 'Daniel Lopez', '2025-06-10', 26000.00);
 
 
+INSERT INTO lease_contracts (VIN, dealership_id, customer_name, lease_start, lease_end, monthly_payment) VALUES 
+('1FA6P8TH2L5100001', 1, 'Alice Johnson', '2025-06-02', '2028-06-02', 450.00),
+('2HGFC2F68NH000002', 2, 'Robert Smith', '2025-05-20', '2028-05-20', 400.00),
+('3HGCM82633A000003', 1, 'Michael Lee', '2025-04-18', '2028-04-18', 500.00),
+('5TDBZRFH3LS000004', 2, 'Sarah Kim', '2025-03-30', '2028-03-30', 550.00),
+('JTMZFREV9JD000005', 1, 'David Brown', '2025-06-05', '2028-06-05', 475.00),
+('4T1BF1FKXHU000006', 2, 'Emily Davis', '2025-06-10', '2028-06-10', 525.00),
+('1HGCV1F34NA000007', 1, 'Chris Wilson', '2025-05-15', '2028-05-15', 495.00),
+('5TDBZRFH3LS000004', 2, 'Jessica Martinez', '2025-04-01', '2028-04-01', 510.00),
+('JHMCF1F71CX000009', 1, 'Daniel Lopez', '2025-06-10', '2028-06-10', 480.00),
+('2T3ZF4DVXBW000010', 2, 'Sophia White', '2025-05-05', '2028-05-05', 530.00);
+
+
