@@ -1,16 +1,14 @@
-package com.yearup.dealership.Main;
+package com.pluralsight.dealership.Main;
 
-import com.yearup.dealership.db.InventoryDao;
-import com.yearup.dealership.db.LeaseDao;
-import com.yearup.dealership.db.SalesDao;
-import com.yearup.dealership.db.VehicleDao;
-import com.yearup.dealership.models.LeaseContract;
-import com.yearup.dealership.models.SalesContract;
-import com.yearup.dealership.models.Vehicle;
+import com.pluralsight.dealership.db.InventoryDao;
+import com.pluralsight.dealership.db.LeaseDao;
+import com.pluralsight.dealership.db.SalesDao;
+import com.pluralsight.dealership.db.VehicleDao;
+import com.pluralsight.dealership.models.LeaseContract;
+import com.pluralsight.dealership.models.SalesContract;
+import com.pluralsight.dealership.models.Vehicle;
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import javax.sql.DataSource;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -20,9 +18,10 @@ public class Main {
     public static void main(String[] args) {
         String username = args[0];
         String password = args[1];
+        String url= args[2];
 
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setUrl("jdbc:mysql://localhost:3306/car_dealership");
+        dataSource.setUrl(url);
 
         dataSource.setUsername(username);
         dataSource.setPassword(password);

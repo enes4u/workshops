@@ -1,4 +1,4 @@
-package com.yearup.dealership.models;
+package com.pluralsight.dealership.models;
 
 public class Vehicle {
     private String vin;
@@ -100,16 +100,10 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "vin='" + vin + '\'' +
-                ", make='" + make + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
-                ", sold=" + sold +
-                ", color='" + color + '\'' +
-                ", vehicleType='" + vehicleType + '\'' +
-                ", odometer=" + odometer +
-                ", price=" + price +
-                '}';
+        return String.format("%-20s %-10s %-10s %-5s %-5s %-12s %-10s %-10s %-10s\n%-20s %-10s %-10s %-5d %-5s %-12s %-10s %,10d $%,.2f",
+                "VIN", "Make", "Model", "Year", "Sold", "Color", "Type", "Odometer", "Price",
+                vin, make, model, year, (sold ? "Yes" : "No"), color, vehicleType, odometer, price);
     }
+
+
 }

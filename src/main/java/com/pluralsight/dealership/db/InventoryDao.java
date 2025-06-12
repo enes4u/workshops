@@ -1,4 +1,4 @@
-package com.yearup.dealership.db;
+package com.pluralsight.dealership.db;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
