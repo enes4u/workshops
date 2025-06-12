@@ -247,7 +247,9 @@ public class Main {
         if (vehicles.isEmpty()) {
             System.out.println("No vehicles found.");
         } else {
-            System.out.println("\nSearch Results:");
+            System.out.println("\nSearch Results:\n");
+            System.out.printf("%-20s %-10s %-10s %-5s %-5s %-12s %-10s %-10s %-10s%n",
+                    "VIN", "Make", "Model", "Year", "Sold", "Color", "Type", "Odometer", "Price");
             for (Vehicle vehicle : vehicles) {
                 System.out.println(vehicle);
             }
