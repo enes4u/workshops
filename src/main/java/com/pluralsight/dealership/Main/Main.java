@@ -213,7 +213,6 @@ public class Main {
         List<Vehicle> vehicles = vehicleDao.searchByYearRange(minYear, maxYear);
         displaySearchResults(vehicles);
     }
-
     private static void searchByColor(VehicleDao vehicleDao, Scanner scanner) {
         System.out.print("Enter the color: ");
         String color = scanner.nextLine();
@@ -242,7 +241,6 @@ public class Main {
         List<Vehicle> vehicles = vehicleDao.searchByType(type);
         displaySearchResults(vehicles);
     }
-
     private static void displaySearchResults(List<Vehicle> vehicles) {
         if (vehicles.isEmpty()) {
             System.out.println("No vehicles found.");
@@ -255,7 +253,6 @@ public class Main {
             }
         }
     }
-
     private static void addVehicleMenu(VehicleDao vehicleDao, InventoryDao inventoryDao, Scanner scanner) {
 
         String vin = generateRandomVin();
